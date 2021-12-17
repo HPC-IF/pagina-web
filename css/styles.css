@@ -622,10 +622,6 @@ nav {
   text-align: center;
 }
 
-.object-fit-cover {
-  object-fit: cover;
-}
-
 .row__mobile {
   width: 100vw;
   overflow-x: auto;
@@ -674,6 +670,10 @@ nav {
   background-color: #f8f8f8;
 }
 
+.card__container {
+  border: 2px solid blue;
+}
+
 .card__profile {
   border: 2px solid black;
 }
@@ -687,11 +687,9 @@ nav {
 .proyect_sip-videos {
   width: 100%;
   background-color: lightblue;
-  height: 250px;
+  height: 300px;
 }
 
-.minheight-col {
-  min-height: 340px;
+body {
+  background-color: red;
 }
-
-/*# sourceMappingURL=main.css.map */
