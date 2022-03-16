@@ -2,13 +2,10 @@
 @import "./baseStyles/base";
 @import "./baseStyles/fontSize";
 @import "./baseStyles/main";
+@import "./componentStyles/cardstyles.scss";
+@import "./componentStyles/memberinformation";
 
 
-.card__profile {
-  border: 2px solid rgb(214, 45, 45);
-  border-radius: 8px;
-  background-color: red;
-}
 
 @media only screen and (max-width: 600px) {
   body {

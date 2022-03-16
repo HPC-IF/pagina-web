@@ -35,6 +35,8 @@ aside {
 
 nav {
   height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -155,40 +157,60 @@ nav {
 }
 
 .center-box {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .justify-content-end {
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .space-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .flex-nowrap {
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .flex-direction-row {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .flex-direction-column {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .align-items-center {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .color-primary {
@@ -310,11 +332,13 @@ h1 {
   font-weight: 600;
   letter-spacing: -1.5px;
 }
+
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 3.75rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h1 {
     font-size: 3rem;
@@ -326,11 +350,13 @@ h2 {
   font-style: normal;
   font-weight: 600;
 }
+
 @media only screen and (min-width: 450px) {
   h2 {
     font-size: 3rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h2 {
     font-size: 2rem;
@@ -342,11 +368,13 @@ h3 {
   font-style: normal;
   font-weight: 600;
 }
+
 @media only screen and (min-width: 450px) {
   h3 {
     font-size: 2rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h3 {
     font-size: 1.5rem;
@@ -358,11 +386,13 @@ h4 {
   font-style: normal;
   font-weight: 600;
 }
+
 @media only screen and (min-width: 450px) {
   h4 {
     font-size: 1.5rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h4 {
     font-size: 1.25rem;
@@ -374,12 +404,14 @@ h5 {
   font-style: normal;
   font-weight: 600;
 }
+
 @media only screen and (min-width: 450px) {
   h5 {
     font-size: 1.25rem;
     line-height: 28px;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h5 {
     font-size: 1.13rem;
@@ -392,12 +424,14 @@ h6 {
   font-style: normal;
   font-weight: 600;
 }
+
 @media only screen and (min-width: 450px) {
   h6 {
     font-size: 1.125rem;
     line-height: 28px;
   }
 }
+
 @media only screen and (max-width: 450px) {
   h6 {
     font-size: 1.13rem;
@@ -412,11 +446,13 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .subtitle-l {
     font-size: 1.125rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .subtitle-l {
     font-size: 1rem;
@@ -429,11 +465,13 @@ h6 {
   font-weight: 500;
   line-height: 24px;
 }
+
 @media only screen and (min-width: 450px) {
   .subtitle-m {
     font-size: 1rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .subtitle-m {
     font-size: 0.88rem;
@@ -446,11 +484,13 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .subtitle-s {
     font-size: 0.88rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .subtitle-s {
     font-size: 0.75rem;
@@ -464,11 +504,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-l-bold {
     font-size: 1.125rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-l-bold {
     font-size: 1rem;
@@ -484,11 +526,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-l-regular {
     font-size: 1.125rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-l-regular {
     font-size: 1rem;
@@ -501,11 +545,13 @@ h6 {
   line-height: 20px;
   /* identical to box height, or 125% */
 }
+
 @media only screen and (min-width: 450px) {
   .body-l-italic {
     font-size: 1.125rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-l-italic {
     font-size: 1rem;
@@ -519,11 +565,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-m-bold {
     font-size: 1rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-m-bold {
     font-size: 0.88rem;
@@ -537,11 +585,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-m-regular {
     font-size: 1rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-m-regular {
     font-size: 0.88rem;
@@ -554,11 +604,13 @@ h6 {
   line-height: 20px;
   /* identical to box height, or 125% */
 }
+
 @media only screen and (min-width: 450px) {
   .body-m-italic {
     font-size: 1rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-m-italic {
     font-size: 0.88rem;
@@ -572,11 +624,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-s-bold {
     font-size: 0.88rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-s-bold {
     font-size: 0.75rem;
@@ -590,11 +644,13 @@ h6 {
   /* identical to box height, or 125% */
   letter-spacing: 0.1px;
 }
+
 @media only screen and (min-width: 450px) {
   .body-s-regular {
     font-size: 0.88rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-s-regular {
     font-size: 0.75rem;
@@ -607,11 +663,13 @@ h6 {
   line-height: 20px;
   /* identical to box height, or 125% */
 }
+
 @media only screen and (min-width: 450px) {
   .body-s-italic {
     font-size: 0.88rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .body-s-italic {
     font-size: 0.75rem;
@@ -625,11 +683,13 @@ h6 {
   /* identical to box height, or 133% */
   letter-spacing: 0.75px;
 }
+
 @media only screen and (min-width: 450px) {
   .button-l-regular {
     font-size: 1.125rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .button-l-regular {
     font-size: 1rem;
@@ -643,11 +703,13 @@ h6 {
   /* identical to box height, or 133% */
   letter-spacing: 0.75px;
 }
+
 @media only screen and (min-width: 450px) {
   .button-m-regular {
     font-size: 1rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .button-m-regular {
     font-size: 0.88rem;
@@ -661,11 +723,13 @@ h6 {
   /* identical to box height, or 133% */
   letter-spacing: 0.75px;
 }
+
 @media only screen and (min-width: 450px) {
   .button-s-regular {
     font-size: 0.88rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
   .button-s-regular {
     font-size: 0.75rem;
@@ -673,9 +737,21 @@ h6 {
 }
 
 .card__profile {
-  border: 2px solid #d62d2d;
   border-radius: 8px;
-  background-color: red;
+}
+
+.card__profile img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.members_information .header-information img {
+  height: auto;
+  width: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
@@ -684,6 +760,7 @@ h6 {
     height: 200px;
   }
 }
+
 .proyect_sip-videos {
   width: 100%;
   background-color: lightblue;
@@ -693,3 +770,4 @@ h6 {
 .minheight-col {
   min-height: 340px;
 }
+/*# sourceMappingURL=styles.css.map */
