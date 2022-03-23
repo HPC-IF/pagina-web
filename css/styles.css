@@ -747,6 +747,13 @@ h6 {
      object-fit: cover;
 }
 
+.card__proyect img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .members_information .header-information img {
   height: auto;
   width: 160px;
