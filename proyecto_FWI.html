@@ -41,7 +41,7 @@
 
                 <p class="mt-2">
 
-                    Mediante unas cuantas cuentas, es posible determinar si, dado un punto en el cual inicia el fuego, el fuego se propagará o no, y con qué peligrosidad. 
+                    Mediante unas cuantas cuentas, es posible estimar si, dado un punto en el cual inicia el fuego, el fuego se propagará o no, y con qué peligrosidad. 
 
                 </p>
                 <p class="mt-2">
@@ -50,7 +50,7 @@
                 </p>
 
                 <p class="mt-2">
-                    El FWI fue desarrollado en Canda (link) pero se lo utiliza en muchos lugares del mundo. Distintos trabajos mostraron la utilidad de este índice para escenarios argentinos.  
+                    El FWI fue desarrollado en Canadá (<a href="https://cwfis.cfs.nrcan.gc.ca/background/summary/fwi" target="_blank">link</a>) pero se lo utiliza en muchos lugares del mundo. Distintos trabajos (por ejemplo, <a href="https://www.argentina.gob.ar/sites/default/files/ambiente-analisispreliminarfocoscalormodis_160317_02_final.pdf" target="_blank">este informe técnico</a>, <a href="https://www.researchgate.net/publication/296938545_Fire_danger_rating_as_a_tool_for_fire_management_Implementation_of_the_CFFDRS_The_Argentine_experience" target="_blank" >artículo</a>, ) mostraron la utilidad de este índice para escenarios argentinos.  
                 </p>
             </div>
         </div>
@@ -59,11 +59,16 @@
                 <h4>Un pequeño resumen de la propuesta del proyecto:</h4>
 
                 <p class="mt-2">
+                    
+                    Personal del Departamento de Incendios, Comunicaciones y Emergencias del Parque Nacional Nahuel Huapi (ICE-PNNH, Administración de Parques Nacionales) nos brinda información del cálculo del FWI, y de cómo se lo utiliza combinándolo con distintas vegetaciones predominantes para calcular la peligrosidad de ignición. 
+                </p>
+                <p class="mt-2">
+                    A partir de esta interacción hemos implementado estos cálculos en C, a fin de tener una aplicación más robusta y rápida para ofrecer al equipo del PNNH con el que colaboramos. Luego, a fin de mejorar la interfaz y hacerla más amigable, implementamos los cálculos en Java  Script respondiendo a varios de los requerimientos solicitados. En este link se encuentra la "Calculadora FWI", implementada para vegetación de nuestra zona, dividida en: pastiza, arbustal y 3 tipos de busque distintos. 
+                </p>
+                <p class="mt-2">
+                    Luego los cálculos para estimar la peligrosidad de incendio fueron embebidos en nuestro Simulador SIP (<a href="proyecto_multimodelo.html"> link </a>). La ventaja de poder realizar los cálculos en el marco del simulador SIP es que se puede visualizar la peligrosidad de ignición en el mapa, esto es, se toma la vegetación de cada celda y con el cálculo del índice se determina la peligrosidad de que un punto de ignición se convierta en un incendio. 
 
                     
-                    Pasamos del excel a un programa en C. Luego pasamos del programa en C al entorno web. Link?
-
-                    También estos cálculos fueron embebidos en el simulador SIP (<a href="proyecto_multimodelo.html"> link </a>). 
                 </p>
 
               
