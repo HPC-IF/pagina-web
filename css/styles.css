@@ -12,13 +12,6 @@ p {
   margin-top: 0;
 }
 
-a,
-a:hover {
-  -webkit-text-decoration: underline red;
-          text-decoration: underline red;
-  color: red;
-}
-
 button {
   font-size: 100%;
   font-family: inherit;
@@ -736,6 +729,13 @@ h6 {
   }
 }
 
+.members_information .header-information img {
+  height: auto;
+  width: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .card__profile {
   border-radius: 8px;
 }
@@ -754,11 +754,22 @@ h6 {
      object-fit: cover;
 }
 
-.members_information .header-information img {
-  height: auto;
-  width: 160px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.title-link-home, .title-link-home:hover {
+  color: #096109;
+  text-decoration: none;
+}
+
+.nav-links {
+  color: #096109;
+}
+
+.nav-links:hover {
+  color: #0da30d;
+  text-decoration: none;
+}
+
+.navbar__container {
+  background-color: #f8f8f8;
 }
 
 @media only screen and (max-width: 600px) {
