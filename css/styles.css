@@ -1,21 +1,20 @@
 * {
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 0.5px;
 }
 
-h2 {
-  font-weight: 600;
-  color: #ffffff;
+a {
+  color: #096109;
+}
+
+a:hover {
+  color: #0da30d;
+  text-decoration: none;
 }
 
 p {
   margin-bottom: 0;
   margin-top: 0;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-  color: #000;
 }
 
 button {
@@ -307,6 +306,10 @@ nav {
   border: none;
 }
 
+.border-radius-8 {
+  border-radius: 8px;
+}
+
 .border-bottom {
   border-bottom: #ffffff 1px solid;
 }
@@ -326,7 +329,7 @@ nav {
 }
 
 h1 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
   letter-spacing: -1.5px;
@@ -345,7 +348,7 @@ h1 {
 }
 
 h2 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -363,7 +366,7 @@ h2 {
 }
 
 h3 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -381,7 +384,7 @@ h3 {
 }
 
 h4 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -399,7 +402,7 @@ h4 {
 }
 
 h5 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -419,7 +422,7 @@ h5 {
 }
 
 h6 {
-  font-family: Inter;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
@@ -735,10 +738,47 @@ h6 {
   }
 }
 
+.members_information .header-information img {
+  height: auto;
+  width: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .card__profile {
-  border: 2px solid #d62d2d;
   border-radius: 8px;
-  background-color: red;
+}
+
+.card__profile img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__proyect img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title-link-home, .title-link-home:hover {
+  color: #096109;
+  text-decoration: none;
+}
+
+.nav-links {
+  color: #096109;
+}
+
+.nav-links:hover {
+  color: #0da30d;
+  text-decoration: none;
+}
+
+.navbar__container {
+  background-color: #f8f8f8;
 }
 
 @media only screen and (max-width: 600px) {
@@ -758,20 +798,3 @@ h6 {
   min-height: 340px;
 }
 /*# sourceMappingURL=styles.css.map */
-
-
-.card__profile {
-  border: 2px solid rgb(214, 45, 45);
-  border-radius: 8px;
-  background-color: red;
-}
-
-.proyect_sip-videos {
-  width: 100%;
-  background-color: lightblue;
-  height: 250px;
-}
-
-.minheight-col {
-  min-height: 340px;
-}
