@@ -1,27 +1,21 @@
 // @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 * {
-  // font-family: "Inter", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 0.5px;
 }
 
-h2 {
-  font-weight: 600;
-  color: $white;
+a {
+  color: rgb(9, 97, 9);
+  &:hover {
+    color: rgb(13, 163, 13);
+    text-decoration: none;
+  }
 }
-
 p {
   margin-bottom: 0;
   margin-top: 0;
 }
-
-// a{
-//   color: #070;
-// }
-// a:hover {
-//   text-decoration: underline rgb(173, 233, 106);
-//   color:  rgb(173, 233, 106);
-// }
 
 button {
   font-size: 100%;
@@ -295,7 +289,9 @@ nav {
 .border-none {
   border: none;
 }
-
+.border-radius-8 {
+  border-radius: 8px;
+}
 .border-bottom {
   border-bottom: $white 1px solid;
 }
