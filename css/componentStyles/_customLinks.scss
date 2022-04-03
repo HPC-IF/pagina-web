@@ -1,0 +1,11 @@
+.title-link-home, .title-link-home:hover{
+    color: rgb(9, 97, 9) ;
+    text-decoration: none;
+}
+.nav-links{
+    color: rgb(9, 97, 9) ;
+    &:hover{
+        color: rgb(13, 163, 13) ;
+        text-decoration: none;
+    }
+}
