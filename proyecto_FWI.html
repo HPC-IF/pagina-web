@@ -42,30 +42,33 @@
     <div class="container mt-5 ">
         <div class="row mt-5">
             <div class="col-12">
-                <h4>Fire Weather Index (el famoso FWI)</h4>
+                <h4><a href="https://cwfis.cfs.nrcan.gc.ca/background/summary/fwi" target="_blank">Fire Weather Index (FWI)</a></h4>
 
                 <p class="mt-2">
-
-                    Mediante unas cuantas cuentas, es posible estimar si, dado un punto en el cual inicia el fuego, el
-                    fuego se propagará o no, y con qué peligrosidad.
+                    El Fire Weather Index (FWI de ahora en más) está formado por 6 componentes que reflejan los efectos de la humedad y del clima en el comportamiento del fuego. 
+                </p>
+                <p class="mt-2">
+                    Los primeros 3 componentes son códigos de humedad del combustible (vegetación presente en un sitio, que dado un incendio, actuará como combustible del fuego). Sus valores crecen a medida que la humedad del suelo decrece (se considera la hojarasca, material orgánico muerto, etc.). Se consideran 3 niveles de combustible: hojarasca y material fino, material orgánico poco compactado y de moderada profundidad y material orgánico compactado y profundo. 
 
                 </p>
                 <p class="mt-2">
-
-                    Estos cálculos se basan en la meteorología y en la vegetación del lugar. Determina el estado del
-                    combustible (fino, medio y grueso), para que propague el fuego. Los cálculos se basan principalmente
-                    en procesos de secado (o pérdida de humedad) y en la meteorología de los últimos días.
+                    Los siguientes 3 componentes son índices de comportamiento del fuego, que representan la taza de propagación del fuego, la carga de combustible disponible para quemar, y la intensidad del fuego. Estos valores crecen en cuanto crece la peligrosidad de incendio. 
+                </p>
+                <p class="mt-2">
+                    Una buena descripción del FWI se encuentra en el siguiente <a href="https://www.nwcg.gov/publications/pms437/cffdrs/fire-weather-index-system#TOC-FWI-Process-Flow-Chart"> link</a>. 
                 </p>
 
                 <p class="mt-2">
-                    El FWI fue desarrollado en Canadá (<a href="https://cwfis.cfs.nrcan.gc.ca/background/summary/fwi"
-                        target="_blank">link</a>) pero se lo utiliza en muchos lugares del mundo. Distintos trabajos
-                    (por ejemplo, <a
+                    El FWI fue desarrollado en Canadá pero su utilización no se restringe a dicho país. En el caso particular de Argentina, existen trabajos científicos que demuestran su utilidad con nuestros suelos y escenarios:  <a
                         href="https://www.argentina.gob.ar/sites/default/files/ambiente-analisispreliminarfocoscalormodis_160317_02_final.pdf"
                         target="_blank">este informe técnico</a>, <a
                         href="https://www.researchgate.net/publication/296938545_Fire_danger_rating_as_a_tool_for_fire_management_Implementation_of_the_CFFDRS_The_Argentine_experience"
-                        target="_blank">artículo</a>, ) mostraron la utilidad de este índice para escenarios argentinos.
+                        target="_blank">artículo</a>. 
                 </p>
+                 <p class="mt-2">
+                    Las entradas del FWI son datos meteorológicos: temperatura, humedad relativa del ambiente, dirección del viento, velocidad del viento y precipitaciones acumulada en las últimas 24hs. Además, necesita de valores previamente calculados para los días anteriores. Si estos no se conocen, es posible usar valores por defecto (lo cual puede llegar a perjudicar en la precisión de los resultados obtenidos). 
+                </p>
+
             </div>
         </div>
         <div class="row mt-5">
@@ -74,29 +77,32 @@
 
                 <p class="mt-2">
 
-                    Personal del Departamento de Incendios, Comunicaciones y Emergencias del Parque Nacional Nahuel
-                    Huapi (ICE-PNNH, Administración de Parques Nacionales) nos brinda información del cálculo del FWI, y
-                    de cómo se lo utiliza combinándolo con distintas vegetaciones predominantes para calcular la
-                    peligrosidad de ignición.
+                    A partir de nuestra comunicación y trabajo colaborativo con personal ténico y brigadistas del <a href="https://www.nahuelhuapi.gov.ar/ice.html">Departamento de Incendios, Comunicaciones y Emergencias del Parque Nacional Nahuel Huapi (ICE-PNNH, Administración de Parques Nacionales)</a> se estableció la necesidad de mejorar los cálculos del FWI. 
                 </p>
                 <p class="mt-2">
-                    A partir de esta interacción hemos implementado estos cálculos en C, a fin de tener una aplicación
-                    más robusta y rápida para ofrecer al equipo del PNNH con el que colaboramos. Luego, a fin de mejorar
-                    la interfaz y hacerla más amigable, implementamos los cálculos en Java Script respondiendo a varios
-                    de los requerimientos solicitados. En este link se encuentra la "Calculadora FWI", implementada para
-                    vegetación de nuestra zona, dividida en: pastiza, arbustal y 3 tipos de busque distintos.
+                    A partir de esta interacción hemos implementado estos cálculos en el lenguaje de programación C, a fin de tener una aplicación
+                    más robusta y rápida para ofrecer al equipo del PNNH con el que colaboramos. Luego, a fin de mejorar la interfaz y hacerla más amigable, implementamos los cálculos en Java Script respondiendo a varios de los requerimientos solicitados.
+                </p>    
+                <p class="mt-2">
+                     Desde <a href="../firesimulationwebinv/proyectoFWI/fwicalculator.html">"Calculadora FWI"</a> se puede acceder a dicha calculadora. La misma permite seleccionar un archivo con datos meteorológicos almacenado localmente, realizar los cálculos del FWI, visualizar y salver los datos en el disco local. 
                 </p>
                 <p class="mt-2">
                     Luego los cálculos para estimar la peligrosidad de incendio fueron embebidos en nuestro Simulador
                     SIP (<a href="proyecto_multimodelo.html"> link </a>). La ventaja de poder realizar los cálculos en
                     el marco del simulador SIP es que se puede visualizar la peligrosidad de ignición en el mapa, esto
                     es, se toma la vegetación de cada celda y con el cálculo del índice se determina la peligrosidad de
-                    que un punto de ignición se convierta en un incendio.
-
-
+                    que un punto de ignición se convierta en un incendio. Esto se muestra en el video representativo de más abajo.
                 </p>
 
 
+            <div class="col-4 minheight-col d-flex flex-direction-column mb-3 ">
+                <h4>Fire Weather Index (FWI) en el simulador SIP</h4>
+                <div class=" mt-1 mt-auto w-100">
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="proyect_sip-videos"
+                        type="text/html"
+                        src="https://www.youtube.com/embed/kGajK4yB68k?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>
+                </div>
+            </div>
 
 
             </div>
