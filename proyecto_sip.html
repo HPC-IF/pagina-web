@@ -24,7 +24,7 @@
             <div class="row align-items-center">
                 <div class="col-5">
                     <a href="index.html" class="title-link-home">
-                        <h3>Simulación de Incendios Forestales</h3>
+                        <h3>Investigación aplicada a la simulación de incedios forestales</h3>
                     </a>
                 </div>
                 <div class="col-7 ">
@@ -45,44 +45,74 @@
                 <h4>SIP: Simulador de Incendios Patagónico.</h4>
 
                 <p class="mt-2">
-
-                    Este simulador de alto rendimiento simula cómo se propaga el fuego en un escenario específico a
-                    partir de 1 (o más) puntos de ignición.
-
+                    Este simulador de alto rendimiento simula cómo se propaga el fuego en un entorno natural específico (escenario) a
+                    partir de 1 (o más) puntos de ignición. 
                 </p>
                 <p class="mt-2">
-                    Es un simulador desarrollado para ser ejecutado en placas gráficas, placas de video juegos (si!!
-                    placas gamers!!)
-                    Es de alto rendimiento porque usamos paralelismo y técnicas de optimización para que sea eficiente.
+                    En un incendio forestal, la intensidad y dirección de avance del fuego está gobernado principalmente por: la vegetación presente en el lugar (que actúa como combustible del fuego), el estado meteorológico del lugar y la topografía. Estos son los factores que más condicionan el avance del fuego en un incendio. Entonces, como la mayoría de los simuladores actuales, nuestro simulador se alimenta de datos topográficos, meteorológicos y de cobertura del suelo a fin de calcular cómo se propagará el fuego.  
                 </p>
                 <p class="mt-2">
-
-                    Durante el desarrollo de estos trabajos hemos mantenido una fructífera comunicació con personal del
-                    Parque Nacional Nahuel Huapi (Administración de Parques Nacionales, Argentina), específicamente con
-                    personal técnico del Departamento de Incendios, Comunicaciones y Emergencias (ICE).
+                    Una vez definido el escenario para la simulación, se usan fórmulas matemáticas que nos ayudan a modelizar el avance del fuego. Dichas fórmulas matemáticas toman los datos de entrada y los puntos de comienzo del fuego y tras múltiples pasos de simulación, se puede observar cómo avanzaría el fuego. 
                 </p>
                 <p class="mt-2">
-
-
+                    Es un simulador desarrollado para ser ejecutado en placas gráficas (para video juegos). El simulador es de alto rendimiento porque usamos paralelismo y técnicas de optimización para que sea eficiente y rápido. En la imagen más abajo se puede ver la vista principal del simulador, y luego, más abajo, se muestran múltiples videos con algunas de las funcionalidades del simulador. 
                 </p>
+                
             </div>
         </div>
 
         <div class="">
             <img src="./images/simulador.png" class="" width="300" height="200" />
         </div>
+
+         <div class="container mt-5 ">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h4>¿Por qué es importante este simulador en nuestro país?</h4>
+
+                <p class="mt-2">
+                    Principalmente, porque está pensado para usarse en nuestros escenarios, en nuestros climas, topografías y vegetaciones predominantes. 
+                </p>
+                <p class="mt-2">
+                    En la actualidad, entidades relacionadas al manejo del fuego, es normal que usen herramientas de simulación desarrolladas en otro países (como puede ser <a href="https://www.fs.usda.gov/treesearch/pubs/4617" target="_blank">FARSITE</a>, <a href="https://firegrowthmodel.ca/pages/" target="_blank">PROMETHEUS</a>, etc.).
+                </p>
+                <p class="mt-2">
+                    Además, como parte de nuestro trabajo de investigación, el estudio de modelos matemáticos que representen la propagación del fuego en un incendio forestal siempre se mantiene como pilar en nuestro trabajo. En este simulador, hemos incorporado 2 modelos matemáticos que modelizan el avance del fuego. El primero, detallado en la sección de proyectos <a href="proyecto_automata_celular" target="_blank"> Autómata Celular</a> se trata de un modelo estadístico, basado en incendios ocurridos en el noroeste patagónico y implementado en un autómata celular, el cual es una de las opciones de nuestro simulador.
+                </p>
+                <p class="mt-2">
+                    Pero, además del autómata celular, un nuevo modelo matemático está siendo desarrollado por nuestro grupo, el cual también está embebido en nuestro simulador SIP. Dicho modelo es un modelo basado en ecuaciones diferenciales, y modeliza el fenómento según sus características de reacción-difusión-convección. Este modelo representa características físicas de la propagación del fuego. En el simulador SIP es posible intercambiar y elegir alguno de los 2 modelos de propagación. 
+                </p>
+                
+            </div>
+        </div>
+          <div class="row mt-5">
+            <div class="col-12">
+                <h4>¿Para qué se puede usar?</h4>
+
+                <p class="mt-2">
+                    Las simulaciones sirven para "simular" un fenómeno, que en nuestro caso, es un incendio forestal. Gracias a los simuladores, se pueden simular incendios sin producir pérdidas ni riesgos, en un entorno seguro como es el uso de una computadora. 
+                </p>
+                <p class="mt-2">
+                    Por otro lado, dadas las características de la interfaz gráfica de nuestro simulador, se obtiene la visualización del avance del fuego en un entorno 3D donde se manejan distintas capas de información: topografía, datos del viento, vegetación, etc. Esto facilita la comprensión de cómo se propagaría el fuego en un entorno en particular. Comprender el fenómeno ayuda en general en las tareas de control, mitigación y reducción del fuego. Se puede usar esta herramienta para ayudar en la toma de decisiones.
+                </p>
+                <p class="mt-2">
+                    Además, se puede utilizar para mejorar los planes de evacuación de personas, como así también de planificación de cortafuegos a fin de reducir los daños causados por las llamas. 
+                </p>
+                
+            </div>
+        </div>
         <div class="row mt-5">
             <div class="col-12">
                 <h4>Un pequeño resumen de la propuesta del simulador:</h4>
-
                 <p class="mt-2">
-
-
+                    El Simulador de Incendios Patagonia (SIP) es un simulador de alto rendimiento que permite visualizar el avance del fuego en un escenario natural específico. Está desarrollado en CUDA C y CUDA C++, utilizando placas de video juegos para acelerar el cálculo, interfaz e interacción con el ususario. Funciona en Linux y Windows. 
                 </p>
-
-
-
-
+                <p class="mt-2">
+                    Las entradas del simulador SIP son mapas de tipo raster ASCII. Las cuales deben ser correctamente armadas antes de usarlas. Todas las capas de información deben coincidir en el área exacta de representación de la superficie terrestre. Las salidas del simulador, además de la salida visual, se pueden obtener mapas del avance del fuego en cualquier paso de simulación. Dichos mapas se almacenan en el disco y, gracias a que son también archivos raster ASCII son georreferenciables y se pueden visualizar y utilizar con cualquier GIS que pueda abrir y manipular archivos raster. 
+                </p>
+                <p class="mt-2">
+                    Funcionalidad actual del simulador: permite abrir distintos escenarios, combinar distintas capas de información, modificar datos meteorológicos y del viento en tiempo de simulación, hacer avanzar y retroceder el fuego, colocar cortafuegos, colocar nuevos puntos de ignición. 
+                </p>
             </div>
         </div>
         <div class="row mt-5">
