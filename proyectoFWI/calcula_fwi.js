@@ -317,18 +317,12 @@ function readFile(file) {
       `firstLine[0][0]`,
       firstLine[0][4] + firstLine[0][1] + firstLine[0][2] + firstLine[0][3]
       );
-      fechaInicial = `${firstLine[0][6] + firstLine[0][7]} /${
-        firstLine[0][4]
-      }${firstLine[0][5]} / ${
-        firstLine[0][0] + firstLine[0][1] + firstLine[0][2] + firstLine[0][3]
-      }`;
-      fechaFinal= `${finalLine[0][6] + finalLine[0][7]} /${
-        finalLine[0][4]
-      }${finalLine[0][5]} / ${
-        finalLine[0][0] + finalLine[0][1] + finalLine[0][2] + finalLine[0][3]
-      }`;
+            
+      fechaInicial = `${firstLine[0][6] + firstLine[0][7] + "/" + firstLine[0][4] + firstLine[0][5] + "/" + firstLine[0][0] + firstLine[0][1] + firstLine[0][2] + firstLine[0][3]}`;
+      fechaFinal =   `${finalLine[0][6] + finalLine[0][7] + "/" + finalLine[0][4] + finalLine[0][5] + "/" + finalLine[0][0] + finalLine[0][1] + finalLine[0][2] + finalLine[0][3]}`;
+   
       divDates.innerHTML=`<label class="p-2 m-1 rounded-lg" for="fecha-inicio"> Fecha de inicio</label>
-      <input readonly class="p-2 m-1 rounded-lg" name="fecha-inicio" id="fecha-inicio" required  value=${fechaInicial}/>
+      <input readonly class="p-2 m-1 rounded-lg" name="fecha-inicio" id="fecha-inicio" required  value=${fechaInicial}>
       <label class="p-2 m-1 rounded-lg" for="fecha-fin"> Fecha de fin </label>
       <input readonly class="p-2 m-1 rounded-lg" id="fecha-fin" name="fecha-fin" required value=${fechaFinal} />`
     };
@@ -639,3 +633,45 @@ estacion_meterologica.addEventListener("change", () => {
   document.getElementById("idDMC").value = values.DMC;
   document.getElementById("idDC").value = values.DC;
 });
+
+
+/*
+function readFile(file) {
+  var reader = new FileReader();
+  reader.onload = (e) => {
+    const file = e.target.result;
+    const lines = file.split(/\r\n|\n/);
+    console.log(`lines.length`, lines.length);
+    let firstLine = lines[0].split(/[ \t]+/);
+    let finalLine = lines[lines.length - 2].split(/[ \t]+/);
+    let divDates = document.getElementById("datesautocomplete")
+    console.log("alkal",divDates)
+    let fechaInicial
+    let fechaFinal 
+    console.log(
+      `firstLine[0][0]`,
+      firstLine[0][4] + firstLine[0][1] + firstLine[0][2] + firstLine[0][3]
+      );
+      fechaInicial = `${firstLine[0][6] + firstLine[0][7]} /${
+        firstLine[0][4]
+      }${firstLine[0][5]} / ${
+        firstLine[0][0] + firstLine[0][1] + firstLine[0][2] + firstLine[0][3]
+      }`;
+      fechaFinal= `${finalLine[0][6] + finalLine[0][7]} /${
+        finalLine[0][4]
+      }${finalLine[0][5]} / ${
+        finalLine[0][0] + finalLine[0][1] + finalLine[0][2] + finalLine[0][3]
+      }`;
+      divDates.innerHTML=`<label class="p-2 m-1 rounded-lg" for="fecha-inicio"> Fecha de inicio</label>
+      <input readonly class="p-2 m-1 rounded-lg" name="fecha-inicio" id="fecha-inicio" required  value=${fechaInicial}/>
+      <label class="p-2 m-1 rounded-lg" for="fecha-fin"> Fecha de fin </label>
+      <input readonly class="p-2 m-1 rounded-lg" id="fecha-fin" name="fecha-fin" required value=${fechaFinal} />`
+    };
+      reader.readAsText(file);
+}
+
+document.getElementById("input-file").onchange = function (e) {
+  readFile(e.currentTarget.files[0]);
+};
+
+*/
