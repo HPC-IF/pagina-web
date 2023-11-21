@@ -223,7 +223,8 @@ function calculaIndices(datos) {
   if (!datos[0] == "") {
     //! para que no ejecute una vez más
     let fecha = datos[0];
-    hh = datos[2]; //Humedad
+    //hh = datos[2]; //Humedad
+    hh = Number(datos[2].replace(/,/g, "."));; //Humedad
     tt = Number(datos[1].replace(/,/g, ".")); //Temperatura
     ww = Number(datos[4].replace(/,/g, ".")); //viento
     ro = Number(datos[5].replace(/,/g, ".")); //lluvia
